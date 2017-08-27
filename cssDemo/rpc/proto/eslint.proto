@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package eslint;
+
+service checkServer {
+  rpc checkRpc (getFile) returns (checkFile) {}
+}
+
+message getFile {
+  string files = 1;
+}
+
+message checkFile {
+  string checkResult = 1;
+}
