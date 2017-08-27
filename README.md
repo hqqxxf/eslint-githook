@@ -1,4 +1,4 @@
-# cssdemo
+# ESlint githook
 
 > A Vue.js project
 
