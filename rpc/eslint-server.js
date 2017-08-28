@@ -6,7 +6,13 @@ const grpc = require('grpc')
 const eslintProto = grpc.load(PROTO_PATH).eslint
 
 function checkRpc (call, callback) {
-  callback(null, {checkResult: call.request.files})
+  const files = call.request.files
+  let checkResult = 'success'
+  console.log(files)
+  if (files) {
+    checkResult = 'error'
+  }
+  callback(null, {checkResult: checkResult})
 }
 
 function main () {

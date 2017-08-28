@@ -7,7 +7,7 @@ service checkServer {
 }
 
 message getFile {
-  string files = 1;
+  bytes files = 1;
 }
 
 message checkFile {
